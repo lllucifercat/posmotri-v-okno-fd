@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -50,12 +53,6 @@ ol {
   background-color: #d9d9d9;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: flex;
   flex-direction: row;
@@ -64,11 +61,17 @@ ol {
   width: 1140px;
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 16px;
+}
+
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
-  margin: 78px 0 16px 0;
 }
 
 .result__video {
@@ -84,6 +87,9 @@ ol {
 }
 
 .search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: none;
 }
 
@@ -205,8 +211,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  width: 100%;
-  height: 100%;
+  width: 399px;
+  height: 534px;
 }
 
 .title {
@@ -270,7 +276,10 @@ ol {
 }
 
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: 5px;
 }
 
 .content__card-link {
@@ -279,13 +288,15 @@ ol {
 }
 
 .content__video-card-title {
-  display: -webkit-box;
+  max-width: 169px; 
   overflow: hidden;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
+  line-height: 100%;
   text-transform: uppercase;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
